@@ -1,38 +1,157 @@
-.App {
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* body {
+    background: linear-gradient(to bottom, #5db4ff, #ffd852);
+} */
+
+select {
+    border: none;
+    outline: none;
+    font-size: 16px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.wrap {
+    width: 80%;
+    margin: 0 auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.diary-wrap {
+    width: 80%;
+    margin: 0 auto;
 }
 
-.App-link {
-  color: #61dafb;
+.diary-section {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0.7cap 0.7cap 2cap rgb(0, 0, 0, 0.4);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.title {
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 3px solid black;
+    background-color: #e0e0e0;
+}
+
+.diary {
+    display: flex;
+    justify-content: center;
+}
+
+.students-list {
+    width: 40%;
+    max-height: 300px;
+    list-style: none;
+    text-decoration: none;
+    border-right: 3px solid black;
+    overflow-y: auto;
+}
+
+.students-list li {
+    font-size: 20px;
+    padding: 10px;
+    border-bottom: 2px solid black;
+}
+
+.diary-table {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.diary-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.diary-table th,
+.diary-table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.diary-table th {
+    background-color: #f2f2f2;
+}
+
+.diary-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.diary-table tbody tr:hover {
+    background-color: #e0e0e0;
+    cursor: pointer;
+}
+
+.input-section {
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-title {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+}
+
+.input-student,
+.input-subject {
+    background: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-subject {
+    max-height: 200px;
+}
+
+.input-student {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-student form,
+.input-subject form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.input {
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    border: 1px solid #4caf50;
+}
+
+.input-student select {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.input-butt {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 500ms;
+
+    &:hover {
+        color: #4caf50;
+        background-color: #fff;
+        border: 1px solid #4caf50;
+    }
 }
